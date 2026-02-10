@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 
@@ -16,38 +15,36 @@ export default function City() {
     <div className="min-h-screen">
       <Navigation />
 
-      <main className="max-w-6xl mx-auto px-6 py-16 space-y-10">
-        <h1 className="text-4xl font-bold">
+      <main className="max-w-5xl mx-auto px-6 py-16">
+        <h1 className="text-4xl font-bold mb-6">
           Demolition, Drywall Demo & Asbestos Removal in {cityName}, BC
         </h1>
 
-        <p className="text-lg text-gray-700">
-          Everything Demo Demolition provides professional drywall demolition,
-          asbestos abatement, and full house demolition services in {cityName}
-          and throughout the Lower Mainland.
+        <p className="mb-6">
+          Everything Demo Demolition provides professional drywall & interior
+          demolition, asbestos abatement coordination, and full house demolition
+          services in {cityName} and throughout the Lower Mainland.
         </p>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">
-            Demolition Services in {cityName}
-          </h2>
+        <h2 className="text-2xl font-semibold mb-4">Services in {cityName}</h2>
+        <ul className="list-disc pl-6 mb-6">
+          <li>Drywall & interior demolition</li>
+          <li>Selective demolition (walls, ceilings, flooring, framing)</li>
+          <li>Popcorn ceiling removal (prep + containment)</li>
+          <li>Full house demolition (structure removal + haul-out)</li>
+          <li>Concrete removal & site prep</li>
+          <li>Excavation & site prep (grading, trenching, cleanup)</li>
+        </ul>
 
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Drywall & interior demolition</li>
-            <li>Selective & structural demolition</li>
-            <li>Popcorn ceiling removal</li>
-            <li>Full house demolition</li>
-            <li>Concrete removal & site prep</li>
-            <li>Asbestos testing & abatement</li>
-          </ul>
-        </section>
+        <h2 className="text-2xl font-semibold mb-4">Asbestos-related work</h2>
+        <p className="mb-6">
+          If asbestos is suspected (common in older drywall compound, ceiling
+          texture, vinyl tile, insulation, plaster), we can help coordinate
+          testing and compliant handling.
+        </p>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">
-            Get a Quote in {cityName}
-          </h2>
-          <p>Call or text today for a fast demolition quote in {cityName}, BC.</p>
-        </section>
+        <h2 className="text-2xl font-semibold mb-4">Get a quote in {cityName}</h2>
+        <p>Call or text today for a fast quote.</p>
       </main>
 
       <Footer />
