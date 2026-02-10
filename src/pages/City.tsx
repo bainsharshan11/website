@@ -1,41 +1,43 @@
-import { useParams } from "react-router-dom";
+return (
+  <div className="min-h-screen">
+    <Navigation />
 
-export default function City() {
-  const { city } = useParams();
+    <main className="max-w-6xl mx-auto px-6 py-16 space-y-10">
+      <h1 className="text-4xl font-bold">
+        Demolition, Drywall Demo & Asbestos Removal in {cityName}, BC
+      </h1>
 
-  const cityName =
-    (city || "your area")
-      .replace(/-/g, " ")
-      .replace(/\b\w/g, (c) => c.toUpperCase());
-
-  return (
-    <main style={{ maxWidth: 900, margin: "0 auto", padding: "24px" }}>
-      <h1>Demolition, Drywall Demo & Asbestos Removal in {cityName}, BC</h1>
-
-      <p>
-        Everything Demo Demolition serves the Lower Mainland with drywall & interior
-        demolition, selective demo, full house demolition, debris hauling, and site prep.
-        We work with homeowners, builders, and contractors in {cityName}.
+      <p className="text-lg text-gray-700">
+        Everything Demo Demolition provides professional drywall demolition,
+        asbestos abatement, and full house demolition services in {cityName}
+        and throughout the Lower Mainland.
       </p>
 
-      <h2>Services in {cityName}</h2>
-      <ul>
-        <li>Drywall & interior demolition</li>
-        <li>Selective demolition (walls, ceilings, flooring, framing)</li>
-        <li>Popcorn ceiling removal (prep + containment)</li>
-        <li>Full house demolition (structure removal + haul-out)</li>
-        <li>Concrete removal & site prep</li>
-        <li>Excavation & site prep (grading, trenching, cleanup)</li>
-      </ul>
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">
+          Demolition Services in {cityName}
+        </h2>
 
-      <h2>Asbestos-related work</h2>
-      <p>
-        If asbestos is suspected (common in older drywall compound, ceiling texture, vinyl tile,
-        insulation, plaster), we can help coordinate testing and compliant handling.
-      </p>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Drywall & interior demolition</li>
+          <li>Selective & structural demolition</li>
+          <li>Popcorn ceiling removal</li>
+          <li>Full house demolition</li>
+          <li>Concrete removal & site prep</li>
+          <li>Asbestos testing & abatement</li>
+        </ul>
+      </section>
 
-      <h2>Get a quote in {cityName}</h2>
-      <p>Call or text for a fast quote.</p>
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">
+          Get a Quote in {cityName}
+        </h2>
+        <p>
+          Call or text today for a fast demolition quote in {cityName}, BC.
+        </p>
+      </section>
     </main>
-  );
-}
+
+    <Footer />
+  </div>
+);
