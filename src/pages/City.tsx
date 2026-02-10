@@ -1,34 +1,42 @@
-import { useParams } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-export default function City() {
-  const { city } = useParams<{ city: string }>();
+import Navigation from "./components/Navigation";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Services from "./components/Services";
+import Process from "./components/Process";
+import Safety from "./components/Safety";
+import Gallery from "./components/Gallery";
+import Testimonials from "./components/Testimonials";
+import FAQ from "./components/FAQ";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
-  if (!city) return null;
+import City from "./pages/City";
 
-  const cityName = city
-    .replace(/-/g, " ")
-    .replace(/\b\w/g, (l) => l.toUpperCase());
-
+function Home() {
   return (
-    <main style={{ maxWidth: 900, margin: "0 auto", padding: "24px" }}>
-      <h1>Demolition & Asbestos Removal in {cityName}, BC</h1>
+    <div className="min-h-screen">
+      <Navigation />
+      <Hero />
+      <About />
+      <Services />
+      <Process />
+      <Safety />
+      <Gallery />
+      <Testimonials />
+      <FAQ />
+      <Contact />
+      <Footer />
+    </div>
+  );
+}
 
-      <p>
-        Everything Demo provides professional drywall demolition, asbestos
-        abatement, and full house demolition services in {cityName} and
-        throughout the Lower Mainland.
-      </p>
-
-      <h2>Services in {cityName}</h2>
-      <ul>
-        <li>Drywall & interior demolition</li>
-        <li>Asbestos testing & abatement</li>
-        <li>Full house demolition</li>
-        <li>Selective & structural demolition</li>
-        <li>Concrete removal & excavation</li>
-      </ul>
-
-      <p>Call today for a free quote in {cityName}.</p>
-    </main>
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/:city" element={<City />} />
+    </Routes>
   );
 }
