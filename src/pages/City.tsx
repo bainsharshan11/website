@@ -14,6 +14,16 @@ export default function City() {
 
   return (
     <div className="min-h-screen">
+     <Helmet>
+  <title>
+    Demolition & Asbestos Removal in {cityName}, BC | Everything Demo
+  </title>
+  <meta
+    name="description"
+    content={`Drywall demolition, asbestos removal, and house demolition services in ${cityName}, BC.`}
+  />
+</Helmet>
+
       <Navigation />
 
       <main className="max-w-5xl mx-auto px-6 py-16">
